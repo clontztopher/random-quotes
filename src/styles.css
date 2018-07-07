@@ -1,0 +1,80 @@
+body {
+  /* background-color: #6f42c1; */
+}
+
+.quote-container {
+  height: 100vh;
+  padding: 20px;
+  max-width: 500px;
+  margin: auto;
+}
+
+.blockquote {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px 0;
+  border-top: 2px solid rgb(31, 155, 207);
+  border-bottom: 2px solid rgb(31, 155, 207);
+}
+
+.blockquote p {
+  font-size: 1.5em;
+}
+
+cite {
+  font-size: 1.25em;
+}
+
+.quote-btns {
+  margin: 20px 0;
+  display: flex;
+}
+
+.quote-btns .btn {
+  flex-grow: 1;
+  flex-basis: 0;
+}
+
+@media all and (max-width: 370px) {
+  .quote-btns {
+    flex-direction: column;
+  }
+}
+
+.transition-enter {
+  opacity: 0;
+  transform: scale(0);
+}
+.transition-enter-active {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 400ms ease-out;
+}
+
+.fas,
+.fab {
+  font-size: 1.25em;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spinner-container {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner-container svg {
+  animation: spin 2s linear infinite;
+  fill: #1a82ae;
+  width: 50px;
+}
